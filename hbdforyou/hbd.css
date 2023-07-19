@@ -1,0 +1,153 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  .card {
+    position: relative;
+    animation: floating 3s ease-in-out infinite;
+  }
+  
+  @keyframes floating {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(0, -10px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  .envelope {
+    position: relative;
+    width: 400px;
+    height: 460px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    overflow: hidden;
+    animation: floating 3s ease-in-out infinite; /* Menambahkan animasi melayang */
+  }
+  
+  .envelope-front {
+    position: relative;
+    padding: 20px;
+  }
+  
+  .address {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .cute-bear {
+    width: 150px; /* Ubah ukuran gambar sesuai kebutuhan */
+    height: 150px;
+    margin:0 auto 260px; /* Untuk mengatur posisi gambar ke tengah secara horizontal */
+  }
+  .stamp {
+    width: 50px;
+    height: 50px;
+    background-color: #ff7f50;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .stamp p {
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .envelope-back {
+    position: absolute;
+    top: 0;
+    left: -200px;
+    width: 200px;
+    height: 140px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, left 0.3s ease-in-out;
+  }
+  .envelope.open .envelope-back {
+    left: 0;
+    opacity: 1;
+  }
+  
+  .letter {
+    display: none;
+  }
+  
+  .envelope.open .letter {
+    display: block;
+  }
+  
+  h2 {
+    color: #ff7f50;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  /* Kode CSS lainnya tetap sama */
+  
+/* Kode CSS lainnya tetap sama */
+
+.next-button {
+    display: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1;
+  }
+  
+  /* Mengatur posisi tulisan "Next" di dalam elemen .stamp */
+  
+  
+  .next-button::before {
+    content: "";
+    display: flex;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+  
+  /* Menambahkan efek transisi untuk animasi munculnya tombol "Next" saat amplop terbuka */
+  .envelope.open .next-button {
+    display: inline-block;
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  /* Kode CSS lainnya tetap sama */
+  
